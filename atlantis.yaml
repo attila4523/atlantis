@@ -11,11 +11,7 @@ workflows:
   myworkflow:
     plan:
       steps:
-      - run: cat /tmp/env
-      - run: echo "Ati"
-      - init
-      - plan:
-          extra_args: ["-lock", "false"]
+      - run: terraform plan --out=main.tfplan
     apply:
       steps:
       - run: echo hi
