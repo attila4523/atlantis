@@ -13,10 +13,10 @@ workflows:
     plan:
       steps:
       - run: cat /tmp/env
+      - run: echo "Ati"
       - init
       - plan:
           extra_args: ["-lock", "false"]
-      - run: echo "Ati"
     apply:
       steps:
       - run: echo hi
