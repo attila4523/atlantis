@@ -14,3 +14,11 @@ workflows:
     plan:
       steps:
       - run: cat /tmp/env
+      - init
+      - plan:
+          extra_args: ["-lock", "false"]
+      - run: echo "Ati"
+    apply:
+      steps:
+      - run: echo hi
+      - apply
