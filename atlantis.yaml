@@ -1,8 +1,7 @@
 version: 2
 projects:
-- name: my-project-name
-  dir: .
-  workspace: default
+- dir: .
+  workspace: main
   autoplan:
     when_modified: ["*.tf", "../modules/**.tf"]
     enabled: true
