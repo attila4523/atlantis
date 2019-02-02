@@ -11,6 +11,7 @@ workflows:
   myworkflow:
     plan:
       steps:
+      - run: init.sh
       - run: terraform plan --out=main.tfplan
     apply:
       steps:
